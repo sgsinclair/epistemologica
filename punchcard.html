@@ -1,0 +1,192 @@
+
+<html>
+<head>
+<link href="https://fonts.googleapis.com/css?family=Teko:300" rel="stylesheet">
+<meta charset="utf-8" />
+<style>
+body {
+margin: 1em;
+}
+table {
+    border-radius: 10px;
+    border: 1px solid black;
+	font-family: Teko, sans-serif;
+	padding: 2px;
+}
+input {font-size: larger; font-family: monospace;}
+td {
+	cursor: pointer;
+}
+.punched {
+	background-color: black;
+}
+</style>
+<script>
+function updatePunchCard(word) {
+
+	// reset
+	var punched = document.querySelectorAll(".punched");
+	for (var i=0, len=punched.length; i<len; i++) {
+		punched[i].className='';
+	}
+	var labels = document.querySelectorAll(".label");
+	for (var i=0, len=labels.length; i<len; i++) {
+		labels[i].innerHTML='';
+	}
+	
+	// punch word
+	word = word.toUpperCase();
+	for (var i=0, len=word.length; i<len; i++) {
+		var code = word.charCodeAt(i),
+			special = -1,
+			val = code-65 + (code>82 ? 1 : 0),
+			quot = val/9,
+			zone = parseInt(quot), // first two blank rows and row with 0
+			row = parseInt((quot-parseInt(quot)) * 10)+1; // row with 1 to 9
+		if (code>=48 && code<=57) { // numbers
+			zone=-1;
+			row=parseInt(word.charAt(i));
+		}
+		else if (code<65 || code>95) {
+			zone = -1; row = -1;
+			switch(word.charAt(i)) {
+				case "&": zone=0; break;
+				case ".": zone=0; row=3; special=10; break;
+				case "¤": zone=0; row=4; special=10; break;
+				case "-": zone=1; break;
+				case "$": zone=1; row = 3; special=10; break;
+				case "*": zone=1; row = 4; special=10; break;
+				case "/": zone=2; row=3; break;
+				case ",": zone=2; row = 3; special=10; break;
+				case "%": zone=2; row = 4; special=10; break;
+				case "#": row=3; special=10; break;
+				case "@": row=4; special=10; break;
+			}
+		}
+		if (zone>-1) {
+			document.getElementById("_"+zone+"_"+i).className='punched';
+		}
+		if (row>-1) {
+			document.getElementById("_"+(row+2)+"_"+i).className='punched';
+		}
+		if (special==10) {
+			document.getElementById("_10_"+i).className='punched';
+		}
+		if (zone>-1 || row>-1) {
+			document.getElementById("_"+i).innerHTML=word.substring(i,i+1)
+		}
+	}
+}
+function checkKey(event) {
+	setTimeout(function() {
+		var el = document.getElementById('text');
+		el.value = el.value.replace(/[^A-Za-z0-9\&\-\$\*,\.%\#\@]/g, " ");
+		updatePunchCard(el.value);
+	}, 0);
+	return true;
+}
+function handleCellClick(cell) {
+	var parts = cell.id.split("_"),
+		row = parseInt(parts[1]),
+		column = parseInt(parts[2]);
+	cell.className = cell.className=="punched" ? "" : "punched";
+	var punched = [], count = 0; zones = 0;
+	for (var i=0; i<12; i++) {
+		punched[i] = document.getElementById("_"+i+"_"+column).className=="punched";
+		if (punched[i]) {
+			count++;
+			if (i<3) {zones++;}
+		}
+	}
+	var character = count == 0 ? " " : "?";
+	if (count==1) { // only one punch (so far), treat as number
+		for (var i=0; i<punched.length; i++) {
+			if (punched[i]) {
+				if (i==0) {
+					character = "&";
+				}
+				else if (i==1) {
+					character = "-";
+				} else if (i>1) {
+					character = String.fromCharCode(48+i-2);
+				}
+				break;
+			}
+		}
+	} else if (zones==1) { // make sure we have only one zone
+		if (count==2) { // should be a letter or /
+			var code = 65;
+			if (punched[1]) {code+=9;}
+			else if (punched[2]) {code+=17;}
+			for (var i=3;i<punched.length;i++) {
+				if (punched[i]) {
+					code+=i-3;
+					if (code==82 && punched[2]) {code=45;} // special handling for -
+					character = String.fromCharCode(code);
+					break;
+				}
+			}
+		} else if (count==3 && punched[10]) { // looks like a special character
+			if (punched[0]) {
+				if (punched[5]) {character = "."}
+				else if (punched[6]) {character = "&#8977;"}
+			} else if (punched[1]) {
+				if (punched[5]) {character = "$"}
+				else if (punched[6]) {character = "*"}
+			} else if (punched[2]) {
+				if (punched[5]) {character = ","}
+				else if (punched[6]) {character = "%"}
+			}
+			
+		}
+	} else if (zones==0 && count==2) {
+		if (punched[10]) {
+			if (punched[5]) {character = "#"}
+			else if (punched[6]) {character = "@"}
+		}
+	}
+	document.getElementById("_"+column).innerHTML=character;
+	var el = document.getElementById('text'),
+		text = el.value;
+	while (text.length<column) {
+		text+=" ";
+	}
+	text = text.substring(0,column) + character + text.substring(column+1)
+	el.value = text;
+}
+
+</script>
+</head>
+<body onload="updatePunchCard(document.getElementById('text').value)">
+<h1>Simple Punch Card Emulator</h1>
+
+<p>In the interface below you can type characters into the text box (they will be removed if they're not supported), or, for
+an interesting challenge, you can try "punching" the characters in yourself by clicking on the boxes.</p>
+
+
+<form>
+type word: <input id="text" value="0123456789     ABCDEFGHIJKLMNOPQRSTUVWXYZ     &.¤-$*/,%#@" onkeydown="return checkKey(event)" onkeypress="return checkKey(event)" style="text-transform: uppercase" size="80" maxlength="80"/>
+</form>
+<table cellpadding="1" cellspacing="1">
+<script>
+// 80 columns, two "blank" rows and row with 0 for zone and rows with 1-9 for value
+var rows = 12, columns = 80, table="";
+// first row for labels;
+table+="<tr>";
+for (var column=0; column<columns; column++) {
+	table+="<td class='label' id='_"+column+"'>&nbsp;</td>";
+}
+table+="</tr>";
+for (var row=0; row<12; row++) {
+	table+="<tr>";
+	for (var column=0; column<columns; column++) {
+		table+="<td id='_"+row+"_"+column+"' onclick='handleCellClick(this)'>"+(row>1 ? (row-2) : '&nbsp;')+"</td>";
+	}
+	table+="</tr>"
+}
+document.write(table);
+</script>
+</table>
+<p>(<a href="https://creativecommons.org/licenses/by/4.0/">CC-BY</a>) Stéfan Sinclair &amp; Geoffrey Rockwell</p>
+</body>
+</html>
