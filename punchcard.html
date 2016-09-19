@@ -80,7 +80,7 @@ function updatePunchCard(word) {
 function checkKey(event) {
 	setTimeout(function() {
 		var el = document.getElementById('text');
-		el.value = el.value.replace(/[^A-Za-z0-9\&\-\$\*,\.%\#\@]/g, " ");
+		el.value = el.value.replace(/[^A-Za-z0-9\/¤\&\-\$\*,\.%\#\@]/g, " ");
 		updatePunchCard(el.value);
 	}, 0);
 	return true;
