@@ -1,10 +1,10 @@
 {
     "metadata": {
         "created": 1492037077579,
-        "modified": 1495547112512,
+        "modified": 1495550365016,
         "version": 2,
         "url": "http://localhost:8080/voyant/spiral/3704f1c8af1186cc09daeb895ee2aa8d?debug=true",
-        "previousNotebook": "faa453af35e812e0cf1d14ecdaa302d2",
+        "previousNotebook": "https://raw.githubusercontent.com/sgsinclair/epistemologica/master/spiral/CharacteristicCurve.json",
         "originalUrl": "faa453af35e812e0cf1d14ecdaa302d2"
     },
     "blocks": [
@@ -32,14 +32,14 @@
                 "e his technique here.</p><h2>Acquiring the Text</h2><p>We'll begin by fetching t",
                 "he edition of <a data-cke-saved-href=\"http://www.gutenberg.org/cache/epub/730/pg",
                 "730.txt\" href=\"http://www.gutenberg.org/cache/epub/730/pg730.txt\" data-tabindex-",
-                "value=\"none\" tabindex=\"-1\" data-tabindex-counter=\"12\" target=\"_blank\">Oliver Twi",
+                "value=\"none\" tabindex=\"-1\" data-tabindex-counter=\"13\" target=\"_blank\">Oliver Twi",
                 "st</a> that's available from the <a data-cke-saved-href=\"http://en.wikipedia.org",
                 "/wiki/Project_Gutenberg\" href=\"http://en.wikipedia.org/wiki/Project_Gutenberg\" d",
-                "ata-tabindex-value=\"none\" tabindex=\"-1\" data-tabindex-counter=\"12\" target=\"_blan",
+                "ata-tabindex-value=\"none\" tabindex=\"-1\" data-tabindex-counter=\"13\" target=\"_blan",
                 "k\">Gutenberg Project</a>.&nbsp;The code block &nbsp;below uses the <a data-cke-s",
                 "aved-href=\"../../docs/#!/api/Voyant.data.model.Corpus-static-method-loadCorpus\" ",
                 "href=\"../../docs/#!/api/Voyant.data.model.Corpus-static-method-loadCorpus\" data-",
-                "tabindex-value=\"none\" tabindex=\"-1\" data-tabindex-counter=\"12\" target=\"_blank\">l",
+                "tabindex-value=\"none\" tabindex=\"-1\" data-tabindex-counter=\"13\" target=\"_blank\">l",
                 "oadCorpus</a> function. The first time it was run without the corpus option, and",
                 " then the corpus ID was added for future runs.</p>"
             ]
@@ -55,12 +55,11 @@
             ],
             "mode": "javascript",
             "output": [
-                "<div style='height: 31px'> <div class=\"info\">This corpus has 1 document with 159",
-                ",006 <span class=\"info-tip\" data-qtip=\"every occurrence of every word (like mult",
-                "iple occurrences of &quot;the&quot;) is counted\">total words</span> and 10,438 <",
-                "span class=\"info-tip\" data-qtip=\"multiple occurrences of words (like &quot;the&q",
-                "uot;) are counted once\">unique word forms</span>. Created <span class=\"info-tip\"",
-                " data-qtip=\"2017-04-17, 21:08:08\">about a month ago</span>.</div></div>"
+                "<div style='height: 14px'> <div role=\"presentation\" class=\"x-mask x-border-box\" ",
+                "id=\"ext-element-36\"><div role=\"presentation\" class=\"x-mask-msg\" id=\"ext-element-",
+                "37\" style=\"right: auto; left: 623px; top: -21px;\"><div role=\"presentation\" class",
+                "=\"x-mask-msg-inner\"><div role=\"presentation\" class=\"x-mask-msg-text\">working…</d",
+                "iv></div></div></div></div>"
             ]
         },
         {
@@ -76,11 +75,7 @@
             "type": "code",
             "input": "corpus.loadTokens({limit: 1000, noOthers: true}).assign(\"wordsStore\").show();",
             "mode": "javascript",
-            "output": [
-                "<div style='height: 31px'> <div class=\"info\">This store contains 1000 items with",
-                " these fields: id, docId, docIndex, token, rawFreq, tokenType, position, startOf",
-                "fset, endOffset.</div></div>"
-            ]
+            "output": "<div style='height: 14px'> </div>"
         },
         {
             "type": "text",
@@ -88,18 +83,18 @@
                 "<p>We have 1,000 terms but each one has far more fields than we need, we're only",
                 " interested in the word length of the term. So we'll create a table where we inc",
                 "rement the value in first column (zero-based) where the row represent the term l",
-                "ength – this uses the <a data-cke-saved-href=\"../../docs/#!/api/VoyantTable-meth",
-                "od-updateCell\" href=\"../../docs/#!/api/VoyantTable-method-updateCell\" target=\"_b",
-                "lank\" data-tabindex-value=\"none\" tabindex=\"-1\" data-tabindex-counter=\"11\">update",
-                "Cell</a> function from the <a data-cke-saved-href=\"../../docs/#!/api/VoyantTable",
-                "\" href=\"../../docs/#!/api/VoyantTable\" target=\"_blank\" data-tabindex-value=\"none",
-                "\" tabindex=\"-1\" data-tabindex-counter=\"11\">table</a>. Finally we use the <a data",
-                "-cke-saved-href=\"../../docs/#!/api/VoyantTable-method-embed\" href=\"../../docs/#!",
-                "/api/VoyantTable-method-embed\" target=\"_blank\" data-tabindex-value=\"none\" tabind",
-                "ex=\"-1\" data-tabindex-counter=\"11\">embed</a> function to view the table as a <a ",
-                "data-cke-saved-href=\"../../docs/#!/api/Voyant.widget.VoyantChart\" href=\"../../do",
-                "cs/#!/api/Voyant.widget.VoyantChart\" target=\"_blank\" data-tabindex-value=\"none\" ",
-                "tabindex=\"-1\" data-tabindex-counter=\"11\">VoyantChart</a>.</p>"
+                "ength â this uses the <a data-cke-saved-href=\"../../docs/#!/api/VoyantTable-me",
+                "thod-updateCell\" href=\"../../docs/#!/api/VoyantTable-method-updateCell\" target=\"",
+                "_blank\" data-tabindex-value=\"none\" tabindex=\"-1\" data-tabindex-counter=\"12\">upda",
+                "teCell</a> function from the <a data-cke-saved-href=\"../../docs/#!/api/VoyantTab",
+                "le\" href=\"../../docs/#!/api/VoyantTable\" target=\"_blank\" data-tabindex-value=\"no",
+                "ne\" tabindex=\"-1\" data-tabindex-counter=\"12\">table</a>. Finally we use the <a da",
+                "ta-cke-saved-href=\"../../docs/#!/api/VoyantTable-method-embed\" href=\"../../docs/",
+                "#!/api/VoyantTable-method-embed\" target=\"_blank\" data-tabindex-value=\"none\" tabi",
+                "ndex=\"-1\" data-tabindex-counter=\"12\">embed</a> function to view the table as a <",
+                "a data-cke-saved-href=\"../../docs/#!/api/Voyant.widget.VoyantChart\" href=\"../../",
+                "docs/#!/api/Voyant.widget.VoyantChart\" target=\"_blank\" data-tabindex-value=\"none",
+                "\" tabindex=\"-1\" data-tabindex-counter=\"12\">VoyantChart</a>.</p>"
             ]
         },
         {
@@ -112,13 +107,7 @@
                 "table.embed(\"VoyantChart\", {series: {showMarkers: false}, noLegend: true, axes: [{grid: true, title: \"Word Length\"}, {grid: true, title: \"Word Count\"}], width: 500})"
             ],
             "mode": "javascript",
-            "output": [
-                "<div style='height: 418px'> <div class=\"info\"><iframe style=\"width: 500px; heigh",
-                "t: 400px\" id=\"ext-231\" name=\"ext-231\" src=\"http://localhost:8080/voyant/tool/Voy",
-                "antChart/?minimal=true&amp;embeddedApiId=a5d847bd2222fc97885ccf9f3f2ac00c&amp;de",
-                "bug=true\" data-tabindex-value=\"none\" tabindex=\"-1\" data-tabindex-counter=\"1\"></i",
-                "frame></div></div>"
-            ]
+            "output": "<div style='height: 14px'> </div>"
         },
         {
             "type": "text",
@@ -126,8 +115,8 @@
                 "<p>If we compare to Mendenall's graph above, that seems pretty close! It's worth",
                 " noting that Mendenhall doesn't specify what exactly was counted, such as chapte",
                 "r titles (which might account for some slight variation).</p>\n\n<p>But Mendehall ",
-                "was counting terms by hand – can we do better? Let's generate a similar chart bu",
-                "t now consider <em>all</em> terms, not just the first 1,000.</p>\n"
+                "was counting terms by hand â can we do better? Let's generate a similar chart ",
+                "but now consider <em>all</em> terms, not just the first 1,000.</p>\n"
             ]
         },
         {
@@ -143,13 +132,7 @@
                 "});"
             ],
             "mode": "javascript",
-            "output": [
-                "<div style='height: 418px'> <div class=\"info\"><iframe style=\"width: 500px; heigh",
-                "t: 400px\" id=\"ext-233\" name=\"ext-233\" src=\"http://localhost:8080/voyant/tool/Voy",
-                "antChart/?minimal=true&amp;embeddedApiId=2525f901b2f5adfb4c39ed68ec78de7b&amp;de",
-                "bug=true\" data-tabindex-value=\"none\" tabindex=\"-1\" data-tabindex-counter=\"1\"></i",
-                "frame></div></div>"
-            ]
+            "output": "<div style='height: 14px'> </div>"
         },
         {
             "type": "text",
@@ -195,27 +178,16 @@
                 "    // embed both word length tables",
                 "    embed([[oliverTwistLengths,'voyantchart',{",
                 "        width: 500,",
-                "        noLegend: true,",
                 "        title: \"Word Lengths in <i>Oliver Twist</i>\"",
                 "    }],[emmaLengths,'voyantchart',{",
                 "        width: 500,",
-                "        noLegend: true,",
                 "        title: \"Word Lengths in <i>Emma</i>\"",
                 "    }]]);",
                 "});",
                 ""
             ],
             "mode": "javascript",
-            "output": [
-                "<div style='height: 422px'> <table><tbody><tr></tr></tbody></table><iframe style",
-                "=\"width: 500px; height: 400px\" id=\"ext-236\" name=\"ext-236\" src=\"http://localhost",
-                ":8080/voyant/tool/VoyantChart/?minimal=true&amp;embeddedApiId=5283ac3b5c81400742",
-                "15aee3d8f6dd8f&amp;debug=true\" data-tabindex-value=\"none\" tabindex=\"-1\" data-tab",
-                "index-counter=\"1\"></iframe><iframe style=\"width: 500px; height: 400px\" id=\"ext-2",
-                "37\" name=\"ext-237\" src=\"http://localhost:8080/voyant/tool/VoyantChart/?minimal=t",
-                "rue&amp;embeddedApiId=4fdaabe16ec894c8c5136b6b892409de&amp;debug=true\" data-tabi",
-                "ndex-value=\"none\" tabindex=\"-1\" data-tabindex-counter=\"1\"></iframe></div>"
-            ]
+            "output": "<div style='height: 14px'> </div>"
         },
         {
             "type": "text",
