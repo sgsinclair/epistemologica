@@ -1,0 +1,41 @@
+{
+    "images": [{
+        "url": "./img/flowchart.jpg",
+        "type": "image",
+        "title": "Language Engineering for the Index Thomisticus",
+        "content": "How would have the Index Thomisticus team and others have used the data processing technologies of the time to automate concording?"
+    }],
+    "annotations": [
+        [{
+            "title": "Step 1",
+            "content": "<p>First, a Scholar breaks the text down into phrases or sentences. In the Varia Specima Concordatium he calls these “periscope” which means “coherent unit of thought.” Later they are called sentences. We suspect they would have been phrases or sentences that were both short enough to fit on a single card (less than 80 characters) and coherent so they could eventually be used as units in the concordance.</p>",
+            "coords": {
+                "x": 286, "y": 75, "width": 1100, "height": 415
+            }
+        },{
+            "title": "Step 2",
+            "content": "<p>Then a Keypunch Operator would enter the sentences onto a punch card to get a sequence of Sentence Cards. While the Scholars seem to have been mostly men, the Operators were mostly men.</p>",
+            "coords": {
+                "x": 282, "y": 487, "width": 380, "height": 172
+            }
+        },{
+            "title": "Step 3",
+            "content": "<p>As IBM technology advanced the project was able to use new machines like an IBM Cardatype machine. With this the operator could produce punched tape. Note that this was not magnetic tape, but a tape with punched holes duplicating the data. The Sentence cards would then be filed in boxes.</p><img src=\"./img/cardatype.jpg\"/>",
+            "coords": {
+                "x": 222, "y": 656, "width": 388, "height": 315
+            }
+        },{
+            "title": "Step 4: Tokenization",
+            "content": "<p>From the phrase cards they then produced the Each Word Cards. This was the “language engineering” innovation of the Index Thomisticus. They figured figured out how to extract individual words, even though these were not in fixed positions on the card.</p>",
+            "coords": {
+                "x": 606, "y": 617, "width": 329, "height": 169
+            }
+        },{
+            "title": "Step 5: Embedded Video",
+            "content": "<p>Example of an embedded video:</p><iframe width=\"400\" height=\"225\" src=\"https://www.youtube-nocookie.com/embed/E5klsvETCAs\" frameborder=\"0\" allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>",
+            "coords": {
+                "x": 539, "y": 764, "width": 690, "height": 501
+            }
+        }]
+    ]
+}
