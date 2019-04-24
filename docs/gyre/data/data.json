@@ -3,7 +3,7 @@
         "url": "./img/flowchart1.jpg",
         "type": "image",
         "title": "Mechanized Linguistic Analysis for the Index Thomisticus Project",
-        "text": "Geoffrey Rockwell and Stefan Sinclair"
+        "text": "<p>This interface helps you navigate a flow chart of some of the steps involved in the Roberto Busa's <i>Index Thomisticus Project</i>, enhanced with images and annotations.</p><div style='font-size: smaller'><p>This project is led by Stéfan Sinclair & Geoffrey Rockwell. Development work by Andrew Macdonald (using some code from <a href='https://openseadragon.github.io'>OpenSeadragon</a> and <a href='http://storiiies.cogapp.com'>Storiiies</a>).</p><p>All the images on this page are kindly made available under a Creative Commons CC-BY-NC license by permission of CIRCSE Research Centre, Università Cattolica del Sacro Cuore, Milan, Italy. The original documents pictured in the images are contained in the Busa Archive, held in the library of the same university. For further information, or to request permission for reuse, please contact Marco Passarotti, on marco.passarotti at unicatt dot it, or by post: Largo Gemelli 1, 20123 Milan, Italy.</p></div>"
     }],
     "annotations": [
         [{
