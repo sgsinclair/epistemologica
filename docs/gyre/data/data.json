@@ -1,40 +1,135 @@
 {
     "images": [{
-        "url": "./img/flowchart.jpg",
+        "url": "./img/flowchart1.jpg",
         "type": "image",
-        "title": "Language Engineering for the Index Thomisticus",
-        "content": "How would have the Index Thomisticus team and others have used the data processing technologies of the time to automate concording?"
+        "title": "Mechanized Linguistic Analysis for the Index Thomisticus Project",
+        "text": "Geoffrey Rockwell and Stefan Sinclair"
     }],
     "annotations": [
         [{
-            "title": "Step 1",
-            "content": "<p>First, a Scholar breaks the text down into phrases or sentences. In the Varia Specima Concordatium he calls these “periscope” which means “coherent unit of thought.” Later they are called sentences. We suspect they would have been phrases or sentences that were both short enough to fit on a single card (less than 80 characters) and coherent so they could eventually be used as units in the concordance.</p>",
+            "title": "How would have the Index Thomisticus team and others have used the data processing technologies of the time to automate concording?",
+            "text": "This web page takes you through a reconstruction of the process that Father Busa and Paul Tasman of IBM developed at Gallarate. The reconstruction is simplified to focus on the innovative language engineering processes developed. To keep it simple we have de-emphasized the ways in which the process and machines used evolved over time. When in doubt we take as our guide the <i>Mechanized Linguistic Analysis</i> flow chart from 1952 (see the Busa Archive section of this site). The flow chart dates from very early in Busa's collaboration with IBM (which began in 1949). Workflow procedures undoubtedly changed over time, and some different machines were used as they became available. The institutional version of CAAL we have focused on in this project as a whole—and which our 3D immersive models reconstruct--dates from 1961-1967. See the models for further details about the machinery.",
+            "media": {
+                "html": "<img src=\"./img/BusaTasman.png\" />",
+                "description": "Paul Tasman (left) and Father Busa (right) in New York, 1956"
+            },
+            "anchor": "tl",
             "coords": {
-                "x": 286, "y": 75, "width": 1100, "height": 415
+                "x": 0, "y": 0, "width": 1450, "height": 615
             }
         },{
-            "title": "Step 2",
-            "content": "<p>Then a Keypunch Operator would enter the sentences onto a punch card to get a sequence of Sentence Cards. While the Scholars seem to have been mostly men, the Operators were mostly men.</p>",
+            "title": "Step 1: Scholar Marks the Phrases",
+            "text": "The first step was an academic one. First, a Scholar breaks the text down into phrases or sentences. In the <i>Varia Specimina Concordantiarum</i> he calls these “periscope” which means “coherent unit of thought.” Later they are called sentences. We suspect they would have been phrases or sentences that were both short enough to fit on a single punched card (less than 80 characters) while still being coherent so they could eventually be used as units in the concordance.",
+            "media": {
+                "html": "<img src=\"./img/Scholars2.png\" />",
+                "description": "Photo of what might be scholars at their desks as Busa gives a tour, 1965"
+            },
+            "anchor": "tl",
             "coords": {
-                "x": 282, "y": 487, "width": 380, "height": 172
+                "x": 0, "y": 119, "width": 685, "height": 476
             }
         },{
-            "title": "Step 3",
-            "content": "<p>As IBM technology advanced the project was able to use new machines like an IBM Cardatype machine. With this the operator could produce punched tape. Note that this was not magnetic tape, but a tape with punched holes duplicating the data. The Sentence cards would then be filed in boxes.</p><img src=\"./img/cardatype.jpg\"/>",
+            "title": "Step 2: Keypunching Cards",
+            "text": "Then a Keypunch Operator would enter the sentences onto a punched card to get a sequence of Phrase or Sentence Cards. While the Scholars seem to have been mostly men, the Operators were mostly women. The most common Keypunch machines seem to have been the IBM 24 and 26. (See the models in the Walkthrough and the Inspector). These cards would have been proofed or verified as a small error at the outset would be magnified with processing.",
+            "media": {
+                "html": "<img src=\"./img/613.png\" />",
+                "description": "Apprentice Keypunch Operators, Gallarate, 1967"
+            },
+            "anchor": "tl",
             "coords": {
-                "x": 222, "y": 656, "width": 388, "height": 315
+                "x": 0, "y": 425, "width": 739, "height": 453
             }
         },{
-            "title": "Step 4: Tokenization",
-            "content": "<p>From the phrase cards they then produced the Each Word Cards. This was the “language engineering” innovation of the Index Thomisticus. They figured figured out how to extract individual words, even though these were not in fixed positions on the card.</p>",
+            "title": "IBM Cardatype",
+            "text": "As IBM technology advanced the project may have had access to new machines like an IBM Cardatype machine which shows up in the Flow Chart. With this the operator could produce punched tape. Note that this was not magnetic tape, but a tape with punched holes duplicating the data.",
+            "media": {
+                "html": "<img src=\"./img/cardatype.png\" />",
+                "description": "The Cardatype Accounting Machine from a <a href=\"https://archive.computerhistory.org/resources/access/text/2017/11/102672516-05-01-acc.pdf\" target=\"_blank\">Welcome to IBM brochure</a>."
+            },
+            "anchor": "tl",
             "coords": {
-                "x": 606, "y": 617, "width": 329, "height": 169
+                "x": 0, "y": 425, "width": 739, "height": 453
+            },
+            "highlight": {
+                "x": 394, "y": 595, "width": 67, "height": 67
             }
         },{
-            "title": "Step 5: Embedded Video",
-            "content": "<p>Example of an embedded video:</p><iframe width=\"400\" height=\"225\" src=\"https://www.youtube-nocookie.com/embed/E5klsvETCAs\" frameborder=\"0\" allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>",
+            "title": "IBM Cardatype",
+            "text": "Interestingly the Cardatype is documented as being released in 1955, but shows up on the Flowchart from 1952. Did the Index project have a prototype before they were released or was the Flowchart anticipating the use of technologies to come?",
+            "media": {
+                "html": "<img src=\"./img/0011.jpg\" />",
+                "description": "An keypunch entry machine in the foreground being shown by Tasman with Busa looking on at the IBM Headquarters in New York, 1952. Note the punched tape to the left of the keyboard. It looks like this system could be used to simultaneously punched cards and tape."
+            },
+            "anchor": "tl",
             "coords": {
-                "x": 539, "y": 764, "width": 690, "height": 501
+                "x": 0, "y": 425, "width": 739, "height": 453
+            },
+            "highlight": {
+                "x": 394, "y": 595, "width": 67, "height": 67
+            }
+        },{
+            "title": "IBM Cardatype",
+            "text": "The Sentence cards would then be filed in boxes. How did cards carry data?<br/><a href=\"https://rawgit.com/sgsinclair/epistemologica/master/punchcard.html\" target=\"_blank\">We have created a punched card emulator where you can see how data might have been encoded.</a>",
+            "media": {
+                "html": "<img src=\"./img/0588.jpg\" />",
+                "description": "The IBM 24 being used in 1965 by Ms. Cortese."
+            },
+            "anchor": "tl",
+            "coords": {
+                "x": 0, "y": 425, "width": 739, "height": 453
+            },
+            "highlight": {
+                "x": 394, "y": 595, "width": 67, "height": 67
+            }
+        },{
+            "title": "Step 3: Tokenizing",
+            "text": "From the Phrase Cards they then produced the Each Word Cards. This was the “language engineering” innovation of the Index Thomisticus project. They figured figured out how to extract individual words, even though these were not in fixed positions on the card. In the <i>Varia Specimina Concordantiarum</i> he describes the innovation,<blockquote>This is equivalent to state that each line was multiplied as many times as words it contained. I must confess that in actual practice this was not so simple as I endeavoured to make it in the description; the second and the successive words did not actually commence in the same column on all cards. In fact, it was this lack of determined fields which constituted the greatest hindrance in transposing the system from the commercial and statistical uses to the sorting of words from a literary text. The result was attained by exploring the cards, column by column, in order to identify by the non-punched columns the end of the previous word and the commencement of the following one; thus, operating with the sorter and reproducer together, were produced only those words commencing and finishing in the same columns.</blockquote>",
+            "anchor": "tl",
+            "coords": {
+                "x": 487, "y": 563, "width": 660, "height": 636
+            }
+        },{
+            "title": "Step 3: Tokenizing",
+            "text": "Today we call this process of splitting a running text into words “tokenizing.” From the running text you get the individual word tokens. Later with the availability of the IBM Cardatype they were able to simplify the tokenizing process as is shown in the Flowchart from 1952. They would produce a continuous punched tape and from that generate the Every Word Cards.<br/><a href=\"https://nbviewer.jupyter.org/github/sgsinclair/epistemologica/blob/master/PunchcardOperations.ipynb\" target=\"_blank\">We have created a IPython program that emulates what we think was the process of tokenizing by sorting.</a>",
+            "media": {
+                "html": "<img src=\"./img/0093.jpg\" />",
+                "description": "Photo from 1956 showing what is probably a Selezionatrice (selector/sorter) probably used for tokenizing."
+            },
+            "anchor": "tl",
+            "coords": {
+                "x": 487, "y": 563, "width": 660, "height": 636
+            }
+        },{
+            "title": "Step 4: Annotation",
+            "text": "Once they have the Each Word Cards they run a series of processes that add information to them. Specifically they:<ul><li>Printed 12 lines of the text on the back of the card</li><li>Printed the reference number of sentence, preceding sentence and following sentence</li><li>Punched the first letter for the previous and following words</li><li>Punched a serial number, number of words in text, and special marks</li></ul>",
+            "anchor": "tl",
+            "coords": {
+                "x": 487, "y": 663, "width": 660, "height": 656
+            }
+        },{
+            "title": "Step 5: Lemmatizing and Creating Entry Words",
+            "text": "The next step was one that involved both machines and scholars and this was to sort the Every Word Cards into Different Word Cards so that Scholars could gather different forms of words under the entries that they wanted in the Concordance. The computer could sort the Each Word Cards and generate a list of all the different words or word types. A Scholar, however, had to decide what the list of Entry Words would be and from that list the computer could generate a set of Entry Word Cards. In deciding the Entry Words the Scholar would have to do the linguistic work of grouping different words under their “lemma” or the head word under which all the forms would be organized.",
+            "anchor": "tl",
+            "coords": {
+                "x": 238, "y": 1890, "width": 1495, "height": 919
+            }
+        },{
+            "title": "Step 6: Collating",
+            "text": "Finally, with the Entry Word Cards created by the Scholars these could be collated with the Different Word Cards and from there one could get the Each Word Cards and finally the Sentence Cards in order to prepare the text for the print concordance. Under each entry word you would have the different forms of the word and then the different instances of that form with enough context to make sense of how Aquinas used the word. In addition to the concordance they also generated other types of indexes and other documentation of Aquinas’ writing.",
+            "anchor": "tl",
+            "coords": {
+                "x": 226, "y": 2926, "width": 1495, "height": 1160
+            }
+        },{
+            "title": "Step 7: Typesetting",
+            "text": "Finally there was a step that didn’t involve the processing the data and that was designing, typesetting and printing the final concordances. From the files in the Busa Archives it is clear that a lot of attention went into how to gracefully fit as much information as possible on the page. This project was for its time the largest project of its kind. The corpus of all of Aquinas’ works measured 15 million words or approximately 60,000 pages (double spaced). To represent this they ended up with 65 million cards which in turn were stored on 500 reels of magnetic tape.",
+            "media": {
+                "html": "<img src=\"./img/negative.png\" />",
+                "description": "Detail of a negative used for printing the <i>Index</i>."
+            },
+            "anchor": "tl",
+            "coords": {
+                "x": 226, "y": 2926, "width": 1495, "height": 1160
             }
         }]
     ]
